@@ -1,0 +1,19 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: influxdb
+  namespace: default
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: avinashbasoor
+  allowCrossNamespaceImport: true
+  datasource:
+    access: proxy
+    database: prometheus
+    jsonData:
+      timeInterval: 5s
+      tlsSkipVerify: true
+    name: influxdb-1
+    type: prometheus
+    url: http://localhost:8086

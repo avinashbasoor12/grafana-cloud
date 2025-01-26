@@ -1,0 +1,13 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: avinashbasoor
+  namespace: default
+  labels:
+    dashboards: avinashbasoor
+spec:
+  external:
+    url: https://avinashbasoor.grafana.net/
+    apiKey:
+      name: grafana-cloud-credentials
+      key: GRAFANA_CLOUD_INSTANCE_TOKEN

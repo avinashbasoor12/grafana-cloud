@@ -1,0 +1,15 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: test
+  namespace: default
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: avinashbasoor
+  folder: "test"
+  json: >
+    {
+      "title": "example-dashboard",
+      "uid" : "ascode"
+    }
